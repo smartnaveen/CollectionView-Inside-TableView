@@ -7,13 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var foodDataArray = [FoodModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        foodDataArray = FoodData.shared.getFoodData()
     }
-
-
 }
+
 
